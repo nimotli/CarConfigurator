@@ -11,5 +11,78 @@ html,body
 
 body
 {
-   
+
+}
+
+.skodaLogo
+{
+	position: absolute;
+	top :2%;
+	left: 2%;
+}
+
+.vehiculeContainer
+{
+	position: absolute;
+	height: 60%;
+	width: 80%;
+ 	left: 10%;  
+ 	bottom: 10%;
+}
+.element1
+{
+	position: absolute;
+	top: 30%;
+	left: 0%;
+	height: 50%;
+	width: 30%;
+}
+.element2
+{
+	margin: auto;
+	position: absolute;
+	top: 35%;
+	left:30%;
+	height: 60%;
+	width: 40%;
+}
+.element3
+{
+	position: absolute;
+	top: 30%;
+	right: 0%;
+	height: 50%;
+	width: 30%;
+}
+
+
+.vehiculeContainer p
+{
+	font-size: 24px;
+	font-family: gothic;
+
+	color: #555555;
+}
+.element1 p
+{
+
+	position: absolute;
+	top:90%;
+	left: 30%;
+}
+.element2 p
+{
+	position: absolute;
+	top:90%;
+	left:40%;
+}
+.element3 p
+{
+	position: absolute;
+	top:90%;
+	right: 30%;
+}
+@font-face {
+  font-family: "gothic";
+  src: url(/dist/fonts/GOTHIC.ttf) format("truetype");
 }

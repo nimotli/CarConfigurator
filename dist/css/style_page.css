@@ -1,0 +1,44 @@
+
+
+.page{background: #f1f1f1;}
+/* logo */
+.page .description #logo{border-bottom: 1px solid #777;margin-top: 12px;}
+
+/* logo et description*/
+.page .description{background: #ffffff;position: absolute;top: 0;left: 50px;color: #000;}
+
+/* contenu de description description*/
+.page .description .description-contenu{padding: 10px;}
+
+/* menu principale : build gallery features */
+.page .menu-principale{position: relative}
+.page .menu-principale ul{list-style-type: none}
+.page .menu-principale .item-menu{width: 100px;height: 100px;background: #ffffff;position: absolute;text-align: center;}
+.page .menu-principale .item-menu:nth-child(1){top:0;left: 0; border-top-left-radius: 100%;}
+.page .menu-principale .item-menu:nth-child(2){top:0;left:110px; border-top-right-radius: 100%;}
+.page .menu-principale .item-menu:nth-child(3){top:110px;left: 0; border-bottom-left-radius: 100%;}
+.page .menu-principale .item-menu:nth-child(4){top:110px;left:110px; border-bottom-right-radius: 100%;}
+.page .menu-principale .item-center{width: 100px;height: 100px;z-index: 9;background: #000; position: absolute;top: 55px; left: 55px;
+                                     border-radius: 50px;color: #fff;text-align: center;}
+
+ .page .menu-principale .item-menu{border: 1px solid;transition: transform .4s .15s}
+.page .menu-principale .item-menu:nth-child(1) h3{ transform: rotate(-39deg);position: absolute;top:10px;left:27px;}
+.page .menu-principale .item-menu:nth-child(2) h3{    transform: rotate(45deg) ;position: absolute;top:17px;left:4px;}
+.page .menu-principale .item-menu:nth-child(3) h3{    transform: rotate(50deg);position: absolute; left:13px;top: 10px;}
+.page .menu-principale .item-menu:nth-child(4) h3{    transform: rotate(131deg);position: absolute;top: 12px;left: 26px;}
+.page .menu-principale .item-menu h3{font-weight: bold}
+.page .menu-principale .item-center h3{position: relative;top:14px;}
+ .page .menu-principale .item-menu{border: 1px solid;transition: transform .4s .15s;transform: scale(1);}                                    
+.page .menu-principale:hover  .item-menu {transform: scale(1)}
+  
+/* choix : color jantes interieur*/
+.page .menu-choix{}
+
+/* contenu : view 360 deg  et thumbs*/
+.page .contenu-view{}
+
+/* contenu : view 360 deg image*/
+.page .contenu-view .contenu-view-image{}
+
+/* contenu : view 360 deg image*/
+.page .contenu-view .contenu-thubms{}

@@ -1,0 +1,49 @@
+.skodaLogo
+{
+	position: absolute;
+	top :2%;
+	left: 2%;
+}
+#MainImageHolder
+{
+	position: absolute;
+	height: 60%;
+	width: 50%;
+	left: 25%;
+	top: 15%;
+}
+#mainImage
+{
+	position:absolute;
+	bottom: 10px;
+}
+#choicesHolder
+{
+	white-space: nowrap;
+	position: absolute;
+	 display: inline-flex;
+	height: 20%;
+	width: 52%;
+	left: 24%;
+	top: 77%;	
+	
+}
+.choice
+{
+	position: relative;
+	top: 5%;
+	height: 90%;
+	width: 100%;
+	background-color: white;
+	border:1px solid black;
+	overflow:hidden;
+}
+
+.imgChoice
+{
+	height: 250%;
+	width: 300%;
+	position: absolute;
+	top:-70%;
+	left: -100%;
+}

@@ -10,6 +10,11 @@ var textPos2 =$('#octavia p:first').position();
 var textPos3 =$('#fabia p:first').position();
 $(document).ready(function()
 {
+	$('#fabiaImg').click(function()
+	{
+		localStorage.setItem("vehicule","fabia");
+		window.location.href = "features.html";
+	})
 
 		function animateSuperb()
 		{

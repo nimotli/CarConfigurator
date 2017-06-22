@@ -47,3 +47,30 @@
 	top:-70%;
 	left: -100%;
 }
+#featureText
+{
+	position: absolute;
+	top : 5%;
+	left: 75.5%;
+	height: 30%;
+	width: 24%;
+}
+#featureText p
+{
+	font-size: 20px;
+	font-family: gothic;
+
+	color: #ccc;
+}
+#featureText h1
+{
+	font-size: 34px;
+	font-family: gothic;
+	font-weight: bold;
+	color: #fff;
+}
+
+@font-face {
+  font-family: "gothic";
+  src: url(/dist/fonts/GOTHIC.ttf) format("truetype");
+}

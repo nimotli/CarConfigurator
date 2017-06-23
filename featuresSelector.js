@@ -1,4 +1,4 @@
-
+let $ = require('jquery');
 var fabiaPath="./dist/images/vehicules/Fabia/Images_Fabia_noir/";
 var octaviaPath="./dist/images/vehicules/Octavia/Images_Octavia_noir/";
 var superbPath="./dist/images/vehicules/Superb/Images_Superb_noir/";
@@ -6,7 +6,8 @@ var pathToUse;
 var item;
 $(document).ready(function()
 {
-	/*item=localStorage.getItem("vehicule");
+	item=localStorage.getItem("vehicule");
+	
 	if (item == "fabia") 
 	{
 		pathToUse=fabiaPath;
@@ -18,8 +19,13 @@ $(document).ready(function()
 	else	
 	{
 		pathToUse=superbPath;
-	}*/
-	
+	}
+	$('#mainImage').attr('src',pathToUse+"0.png");
+	$('#img1').attr('src',pathToUse+"1.png");
+	$('#img2').attr('src',pathToUse+"2.png");
+	$('#img3').attr('src',pathToUse+"3.png");
+	$('#img4').attr('src',pathToUse+"4.png");
+	$('#img5').attr('src',pathToUse+"5.png");
 	$('#featureText').slideUp(10);
 	document.body.appendChild(createLine(64.6	, 38, 75, 38,"line1"));
 	document.body.appendChild(createLine(75, 30.2, 75, 15,"line2"));
@@ -44,6 +50,7 @@ $(document).ready(function()
 
 	$('.imgChoice').click(function()
 	{
+		stopAnimations();
 		var clickedImage=$(this);
 		$('#featureText').slideUp(300);
 		$('#line1').fadeOut(300);
@@ -57,47 +64,61 @@ $(document).ready(function()
 		$('#line9').fadeOut(300);
 		$('#line10').fadeOut(300);
 		$('#mainImage').fadeOut(300,function()
+		{
+			
+			$('#mainImage').attr('src',clickedImage.attr('src'));
+			$('#mainImage').fadeIn(300,function()
 			{
-				
-				$('#mainImage').attr('src',clickedImage.attr('src'));
-				$('#mainImage').fadeIn(300,function()
-				{
 
-					if (clickedImage.attr('id') == "img1")
-					{
-						$('#line1').fadeIn(500,function(){$('#line2').fadeIn(500,function(){$('#featureText').
-							html("<h1>The title of something about the trunk </h1><p>the description of that thing about the trunk </p>").
-							slideDown(1000)});});
-					}
-					else if (clickedImage.attr('id') == "img2")
-					{
-						$('#line3').fadeIn(500,function(){$('#line4').fadeIn(500,function(){$('#featureText').
-							html("<h1>The title of something about the side mirror</h1><p>the description of that thing about the side mirror</p>").
-							slideDown(1000)});});
-					}
-					else if (clickedImage.attr('id') == "img3")
-					{
-						$('#line5').fadeIn(500,function(){$('#line6').fadeIn(500,function(){$('#featureText').
-							html("<h1>The title of something about the bumper</h1><p>the description of that thing about the bumper</p>").
-							slideDown(1000)});});
-					}
-					else if (clickedImage.attr('id') == "img4")
-					{
-						$('#line7').fadeIn(500,function(){$('#line8').fadeIn(500,function(){$('#featureText').
-							html("<h1>The title of something about the headlights</h1><p>the description of that thing about the headlights</p>").
-							slideDown(1000)});});
-					}
-					else
-					{
-						$('#line9').fadeIn(500,function(){$('#line10').fadeIn(500,function(){$('#featureText').
-							html("<h1>The title of something about the wheels</h1><p>the description of that thing about the wheels</p>").
-							slideDown(1000)});});
-					}
-					
-				})
-				
-			});
+				if (clickedImage.attr('id') == "img1")
+				{
+					$('#line1').fadeIn(500,function(){$('#line2').fadeIn(500,function(){$('#featureText').
+						html("<h1>The title of something about the trunk </h1><p>the description of that thing about the trunk </p>").
+						slideDown(1000)});});
+				}
+				else if (clickedImage.attr('id') == "img2")
+				{
+					$('#line3').fadeIn(500,function(){$('#line4').fadeIn(500,function(){$('#featureText').
+						html("<h1>The title of something about the side mirror</h1><p>the description of that thing about the side mirror</p>").
+						slideDown(1000)});});
+				}
+				else if (clickedImage.attr('id') == "img3")
+				{
+					$('#line5').fadeIn(500,function(){$('#line6').fadeIn(500,function(){$('#featureText').
+						html("<h1>The title of something about the bumper</h1><p>the description of that thing about the bumper</p>").
+						slideDown(1000)});});
+				}
+				else if (clickedImage.attr('id') == "img4")
+				{
+					$('#line7').fadeIn(500,function(){$('#line8').fadeIn(500,function(){$('#featureText').
+						html("<h1>The title of something about the headlights</h1><p>the description of that thing about the headlights</p>").
+						slideDown(1000)});});
+				}
+				else
+				{
+					$('#line9').fadeIn(500,function(){$('#line10').fadeIn(500,function(){$('#featureText').
+						html("<h1>The title of something about the wheels</h1><p>the description of that thing about the wheels</p>").
+						slideDown(1000)});});
+				}
+			})
+		});
 	})
+
+	$('#backButton').mouseenter(function()
+		{
+			$(this).css("background-color","white")
+		}	
+	)
+	$('#backButton').mouseleave(function()
+		{
+			$(this).css("background-color","lightgrey")
+		}	
+	)
+	$('#backButton').click(function()
+		{
+			parent.history.back();
+		}	
+	)
 }
 );
 function createLineElement(x, y, length, angle,id) {
@@ -132,6 +153,20 @@ function createLine(x1, y1, x2, y2,id) {
     var alpha = Math.PI - Math.atan2(-b, a);
 
     return createLineElement(x, y, c, alpha,id);
+}
+function stopAnimations()
+{
+	$('#featureText').stop();
+	$('#line1').stop(true,false);
+	$('#line2').stop(true,false);
+	$('#line3').stop(true,false);
+	$('#line4').stop(true,false);
+	$('#line5').stop(true,false);
+	$('#line6').stop(true,false);
+	$('#line7').stop(true,false);
+	$('#line8').stop(true,false);
+	$('#line9').stop(true,false);
+	$('#line10').stop(true,false);
 }
 
 

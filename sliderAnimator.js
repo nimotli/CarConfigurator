@@ -74,7 +74,7 @@ $(document).ready(function()
 			{
 				$('#octavia p:first').animate({'top':textPos2.top +'px' ,'left':textPos2.left+'px'},800);
 				$('#octaviaImg').attr('src', './dist/images/sliderPrincipale/Octavia/2.png');
-				$('#octaviaImg').animate({height: '150%', width: '170%' },800,'easeInOutQuad');
+				$('#octaviaImg').animate({height: '140%', width: '160%' },800,'easeInOutQuad');
 				$('#octavia').animate({'top':pos2.top +'px' ,'left':pos2.left+'px' },800,'easeInOutQuad',function()
 					{
 						octaviaCount=2;
@@ -85,7 +85,7 @@ $(document).ready(function()
 			{
 				$('#octavia p:first').animate({'top':textPos1.top +'px' ,'left':textPos1.left+'px'},800);
 				$('#octaviaImg').attr('src', './dist/images/sliderPrincipale/Octavia/3.png');
-				$('#octaviaImg').animate({height: '100%', width: '100%' },800,'easeInOutQuad');
+				$('#octaviaImg').animate({height: '110%', width: '100%' },800,'easeInOutQuad');
 				$('#octavia').animate({'top':pos3.top +'px' ,'left':pos3.left+'px' },800,'easeInOutQuad',function()
 					{
 						octaviaCount=3;
@@ -96,7 +96,7 @@ $(document).ready(function()
 			{
 				$('#octavia p:first').animate({'top':textPos3.top +'px' ,'left':textPos3.left+'px'},800);
 				$('#octaviaImg').attr('src', './dist/images/sliderPrincipale/Octavia/1.png');
-				$('#octaviaImg').animate({height: '100%', width: '100%' },800,'easeInOutQuad');
+				$('#octaviaImg').animate({height: '110%', width: '100%' },800,'easeInOutQuad');
 				$('#octavia').animate({'top':pos1.top +'px' ,'left':pos1.left+'px' },800,'easeInOutQuad',function()
 					{
 						octaviaCount=1;

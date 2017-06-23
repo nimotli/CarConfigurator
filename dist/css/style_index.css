@@ -66,20 +66,20 @@ body
 {
 
 	position: absolute;
-	top:90%;
+	top:120%;
 	left: 30%;
 }
 .element2 p
 {
 	position: absolute;
-	top:90%;
-	left:40%;
+	top:120%;
+	left:67%;
 }
 .element3 p
 {
 	position: absolute;
-	top:90%;
-	right: 30%;
+	top:120%;
+	right: 7%;
 }
 @font-face {
   font-family: "gothic";

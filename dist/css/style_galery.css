@@ -1,0 +1,26 @@
+.container
+{
+    position: absolute;
+    width: 99%;
+    height: 90%;
+    overflow: hidden;
+}
+#galeryImageHolder
+{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    height: 75%;
+    width:  80%;
+}
+#galeryList
+{
+    overflow: hide;
+    margin: 0 auto;
+    text-align: center;
+}
+#galeryList li
+{
+    display: inline-block;
+    vertical-align: top;
+}

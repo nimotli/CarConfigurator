@@ -11,6 +11,15 @@ var textPos3 =$('#fabia p:first').position();
 $(document).ready(function()
 {
 	
+	$('.vehiculeContainer').on("Swiperight",function()
+	{
+		alert("swipright");
+	});
+	$('.vehiculeContainer').on("Swipeleft",function()
+	{
+		alert("swipleft");
+	});
+
 	
 	$('#fabiaImg').click(function()
 	{
@@ -33,6 +42,7 @@ $(document).ready(function()
 			
 			if (superbCount==1)
 			{
+				
 				$('#superb p:first').animate({'top':textPos2.top +'px' ,'left':textPos2.left+'px'},800);
 				$('#superbImg').attr('src', './dist/images/sliderPrincipale/Superb/2.png');
 				$('#superbImg').animate({height: '160%', width: '200%' },800,'easeInOutQuad');
@@ -57,13 +67,13 @@ $(document).ready(function()
 			else	
 			{
 				$('#superb p:first').animate({'top':textPos3.top +'px' ,'left':textPos3.left+'px'},800);
-				$('#superbImg').attr('src', './dist/images/sliderPrincipale/Superb/1.png');
 				$('#superbImg').animate({height: '130%', width: '130%' },800,'easeInOutQuad');
-				$('#superb').animate({'top':pos1.top +'px' ,'left':pos1.left+'px' },800,'easeInOutQuad',function()
+				$('#superb').fadeOut(200).animate({'top':pos1.top +'px' ,'left':pos1.left+'px' },600,'easeInOutQuad',function()
 					{
 						superbCount=1;
+						$('#superbImg').attr('src', './dist/images/sliderPrincipale/Superb/1.png');
 						setTimeout(function(){animateSuperb(); }, 4000);
-					});
+					}).fadeIn(100);
 			}
 		}
 
@@ -95,13 +105,14 @@ $(document).ready(function()
 			else	
 			{
 				$('#octavia p:first').animate({'top':textPos3.top +'px' ,'left':textPos3.left+'px'},800);
-				$('#octaviaImg').attr('src', './dist/images/sliderPrincipale/Octavia/1.png');
+				
 				$('#octaviaImg').animate({height: '110%', width: '100%' },800,'easeInOutQuad');
-				$('#octavia').animate({'top':pos1.top +'px' ,'left':pos1.left+'px' },800,'easeInOutQuad',function()
+				$('#octavia').fadeOut(200).animate({'top':pos1.top +'px' ,'left':pos1.left+'px' },600,'easeInOutQuad',function()
 					{
 						octaviaCount=1;
+						$('#octaviaImg').attr('src', './dist/images/sliderPrincipale/Octavia/1.png');
 						setTimeout(function(){animateOctavia(); }, 4000);
-					});
+					}).fadeIn(100);
 			}
 		}
 
@@ -133,18 +144,22 @@ $(document).ready(function()
 			else	
 			{
 				$('#fabia p:first').animate({'top':textPos3.top +'px' ,'left':textPos3.left+'px'},800);
-				$('#fabiaImg').attr('src', './dist/images/sliderPrincipale/Fabia/1.png');
+				
 				$('#fabiaImg').animate({height: '130%', width: '130%' },800,'easeInOutQuad');
-				$('#fabia').animate({'top':pos1.top +'px' ,'left':pos1.left+'px'},800,'easeInOutQuad',function()
+				$('#fabia').fadeOut(200).animate({'top':pos1.top +'px' ,'left':pos1.left+'px'},600,'easeInOutQuad',function()
 					{
-						
 						fabiaCounter=1;
+						$('#fabiaImg').attr('src', './dist/images/sliderPrincipale/Fabia/1.png');
 						setTimeout(function(){animateFabia(); }, 4000);
-					});
+					}).fadeIn(100);
 			}
 		}
 		animateFabia();
 		animateOctavia();
 		animateSuperb();
 	}
+
+
+
+
 );

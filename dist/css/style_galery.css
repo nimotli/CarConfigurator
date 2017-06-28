@@ -17,6 +17,7 @@
 }
 #galeryList
 {
+    position: absolute;
     overflow: hide;
     margin: 0 auto;
     text-align: center;
@@ -25,4 +26,8 @@
 {
     display: inline-block;
     vertical-align: top;
+}
+.galeryItem
+{
+    position: relative;
 }

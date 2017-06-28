@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>carconfigurator</title>
     <link href="./dist/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./dist/css/style.css">
     <link rel="stylesheet" type="text/css" href="./dist/css/style_galery.css">
 
     <script src="./dist/js/jquery-3.2.1.js"></script>
   </head>
   <body background="dist/images/Background.jpg">
+  <script src="dist/plugins/hammer.js"></script>
     <h1 align="center" style="font-family: gothic; color: #fff;font-weight: bold;font-size: 44px;"> Features </h1>
      <div class="container-fluid contenu">
 
@@ -37,7 +37,22 @@
        </div><!--fin row-->
 
      </div><!--fin contenu-->     
-    
+    <script type="text/javascript">
+          $(function(){  
+              var myElement = document.body;
+              var mc = new Hammer(myElement);
+              var sw = new Hammer.Swipe();
+              mc.on("swiperight", function(ev) {
+                if(hasChosen == 1)
+                  movetoright();
+              });
+              mc.on("swipeleft", function(ev) {
+                if(hasChosen == 1)
+                  movetoleft();
+              });
+          }); 
+      </script>
+
       <script src="./galerySlider.js"></script>
       
     <script type="text/javascript">document.oncontextmenu = new Function("return false");</script>

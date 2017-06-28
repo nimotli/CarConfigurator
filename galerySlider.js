@@ -1,8 +1,13 @@
 var passedVehicule = localStorage.getItem("vehicule");;
+var hasChosen=0;
 var fabiaPath ="./dist/images/Galery/fabia/";
 var octaviaPath ="./dist/images/Galery/octavia/";
 var superbPath ="./dist/images/Galery/superb/";
+var temp=$('#galeryList');
 passedVehicule="fabia";
+var currentGaleryImage;
+var $first = $('li:first', '#galeryList');
+var $last = $('li:last', '#galeryList');
 $(document).ready(function()
 {
     if(passedVehicule == "fabia")
@@ -32,6 +37,44 @@ $(document).ready(function()
 
     $('.galeryItem').click(function()
     {
-        $('#galeryImageHolder').animate({'top':'200%'},1000)
+        
+        hasChosen = 1;
+        currentGaleryImage=$(this);
+        var element = $('#galeryList').detach();
+        $('.galeryMask').append(element);
+        $('#galeryList').animate({'top':'150%'},600,);
+        currentGaleryImage.addClass('selected');
+        currentGaleryImage.css({position: 'absolute'});
+        currentGaleryImage.animate({top:'-380%',left :'25%','width' :'100%','height': '150%'},500);     
     });
+
+});
+
+function movetoleft()
+{
+    var $next;
+    var $selected = $(".selected");
+    $selected.animate({left :'-100%'},600);
+    /*$next = $selected.next('li').length ? $selected.next('li') : $first;
+    $selected.removeClass("selected");
+    $next.addClass('selected');
+    
+    $(".selected").css({top:'-380%',left :'200%','width' :'50%','height': '50%'});
+    $(".selected").animate({top:'-380%',left :'25%'},600)*/
+}
+
+function movetoright()
+{
+
+}
+
+
+
+
+$("#next").click(function () {
+    var $next;
+    var $selected = $(".selected");
+    $next = $selected.next('li').length ? $selected.next('li') : $first;
+    $selected.removeClass("selected");
+    $next.addClass('selected');
 });

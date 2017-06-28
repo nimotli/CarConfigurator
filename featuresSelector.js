@@ -1,4 +1,4 @@
-let $ = require('jquery');
+//let $ = require('jquery');
 var fabiaPath="./dist/images/vehicules/Fabia/Images_Fabia_noir/";
 var octaviaPath="./dist/images/vehicules/Octavia/Images_Octavia_noir/";
 var superbPath="./dist/images/vehicules/Superb/Images_Superb_noir/";

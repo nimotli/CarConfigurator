@@ -49,14 +49,14 @@
 }
 #featureText
 {
-	position: absolute;
-	top : 5%;
-	left: 75.5%;
-	height: 30%;
-	width: 24%;
+	
+	padding-right: 10px;
+	overflow-y: auto;
 }
 #featureText p
 {
+	padding-left: 15px;
+	border-left: 2px solid #eee;
 	font-size: 20px;
 	font-family: gothic;
 
@@ -64,12 +64,35 @@
 }
 #featureText h1
 {
+	padding-left: 15px;
+	border-left: 2px solid #eee;
 	font-size: 34px;
 	font-family: gothic;
 	font-weight: bold;
-	color: #fff;
+	color: #eee;
 }
-
+.node1
+{
+	position: absolute;
+	height: 10%;
+	width: 10%;
+	top:41%;
+	left:60%;
+}
+.node2
+{
+	
+	position: absolute;
+	height: 30%;
+	width: 23%;
+	top:5%;
+	left:75%;
+}
+connection 
+{
+    border: 2px solid #eee;
+    border-radius: 10px;
+}
 @font-face {
   font-family: "gothic";
   src: url(/dist/fonts/GOTHIC.ttf) format("truetype");

@@ -47,7 +47,8 @@
 
      </div>   
       <script type="text/javascript">
-          $(function(){  
+      
+          
               var myElement = document.getElementById('dragSpace');
               var mc = new Hammer(myElement);
               var sw = new Hammer.Swipe();
@@ -57,9 +58,9 @@
               mc.on("swipeleft", function(ev) {
                   animateToLeft();
               });
-          }); 
+          
       </script>
-      <script src="./sliderAnimator.js"></script>
+      <script src="./sliderAnimator.js">let $ = require('jquery');</script>
       
     <script type="text/javascript">document.oncontextmenu = new Function("return false");</script>
     <script src="./dist/js/jquery-3.2.1.js"></script>

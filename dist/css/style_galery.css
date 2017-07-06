@@ -1,3 +1,11 @@
+.UpperDiv
+{
+    position:  absolute;
+    left :0%;
+    top: 2%;
+    width: 100%;
+    height: 8%;
+}
 .galeryMask
 {
     left: 0%;
@@ -21,6 +29,8 @@
     overflow: hide;
     margin: 0 auto;
     text-align: center;
+    height: 100%;
+    width: 100%;
 }
 #galeryList li
 {
@@ -30,4 +40,21 @@
 .galeryItem
 {
     position: relative;
+}
+
+#dropleft
+{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+}
+#dropright
+{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    width: 50%;
+    height: 100%;
 }

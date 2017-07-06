@@ -16,10 +16,12 @@
      <div class="container-fluid contenu">
 
        <div class="container">
+         <div id="dropleft"></div>
+         <div id="dropright"></div>
            <div class="galeryMask">
                 <div id="galeryImageHolder">
                     <ul id="galeryList">
-                        <li><img class="galeryItem" id="galImage1" src="" style="height: 250px;width: 250px;padding: 20px"></li>
+                        <li><img class="galeryItem" id="galImage1"  src="" style="height: 250px;width: 250px;padding: 20px"></li>
                         <li><img class="galeryItem" id="galImage2" src="" style="height: 250px;width: 250px;padding: 20px"></li>
                         <li><img class="galeryItem" id="galImage3" src="" style="height: 250px;width: 250px;padding: 20px"></li>
                         <li><img class="galeryItem" id="galImage4" src="" style="height: 250px;width: 250px;padding: 20px"></li>
@@ -28,8 +30,8 @@
             </div>
            </div>
           <div class ="UpperDiv">
-            <img id="skodaLogo" src="dist/images/Skoda-logo.png" height="6%" width="5%" style="position: absolute;right :5%;border-radius: 50% ;background-color: lightgrey ">
-            <img id="backButton" src="dist/images/backicone.png" height="6%" width="5%" style="position: absolute;right :90%;border-radius: 50% ;background-color: lightgrey "> 
+            <img id="skodaLogo" src="dist/images/Skoda-logo.png" height="100%" width="5%" style="position: absolute;right :5%;border-radius: 50% ;background-color: lightgrey ">
+            <img id="backButton" src="dist/images/backicone.png" height="100%" width="5%" style="position: absolute;right :90%;border-radius: 50% ;background-color: lightgrey "> 
           </div>
 
          
@@ -38,19 +40,17 @@
 
      </div><!--fin contenu-->     
     <script type="text/javascript">
-          $(function(){  
-              var myElement = document.body;
-              var mc = new Hammer(myElement);
-              var sw = new Hammer.Swipe();
-              mc.on("swiperight", function(ev) {
-                if(hasChosen == 1)
-                  movetoright();
-              });
-              mc.on("swipeleft", function(ev) {
-                if(hasChosen == 1)
-                  movetoleft();
-              });
-          }); 
+       /*   var myElement = document.body;
+          var mc = new Hammer(myElement);
+          var sw = new Hammer.Swipe();
+          mc.on("swiperight", function(ev) {
+            if(hasChosen == 1)
+              movetoright();
+          });
+          mc.on("swipeleft", function(ev) {
+            if(hasChosen == 1)
+              movetoleft();
+          });*/
       </script>
 
       <script src="./galerySlider.js"></script>
@@ -66,4 +66,4 @@
     <script src="./dist/js/script_index.js"></script>
 
   </body>
-</html
+</html>

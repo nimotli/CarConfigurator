@@ -1,4 +1,4 @@
-//let $ = require('jquery');
+let $ = require('jquery');
 var animationFinished=1;
 var superbCount = 3;
 var octaviaCount = 2;
@@ -26,17 +26,17 @@ $(document).ready(function()
 	$('#fabiaImg').click(function()
 	{
 		localStorage.setItem("vehicule","fabia");
-		window.location.href = "features.html";
+		window.location.href = "galery.html";
 	})
 	$('#octaviaImg').click(function()
 	{
 		localStorage.setItem("vehicule","octavia");
-		window.location.href = "features.html";
+		window.location.href = "galery.html";
 	})
 	$('#superbImg').click(function()
 	{
 		localStorage.setItem("vehicule","superb");
-		window.location.href = "features.html";
+		window.location.href = "galery.html";
 	})
 
 	

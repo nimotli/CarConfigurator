@@ -1,0 +1,175 @@
+.body  
+{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.UpperDiv
+{
+    position:  absolute;
+    left :0%;
+    top: 2%;
+    width: 100%;
+    height: 8%;
+}
+
+.menuimg
+{
+    height: 50%;
+    width: 50%;
+}
+.menudiv
+{
+    position: absolute;
+    top:20% ;
+    left: 2%;
+}
+.menuelementimg
+{
+    height: 100%;
+    width: 100%;
+}
+.menuelementdiv
+{
+    position: absolute;
+    top:0 ;
+    left:0;
+}
+
+#menuContainer
+{
+    position: absolute;
+    top:0 ;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+#menu
+{
+}
+#menuInner
+{
+}
+#selector
+{
+    pointer-events: none;
+    height: 50%;
+    width: 50%;
+}
+#attentionGraber
+{
+}
+#galeriediv
+{
+    z-index: 10;
+    position: absolute;
+    height: 50%;
+    width: 20%;
+    top: 25%;
+    left: 11%;
+}
+#interieurdiv
+{
+    z-index: 10;
+    position: absolute;
+    height: 20%;
+    width: 50%;
+    top: 11%;
+    left: 25%;
+}
+#exterieurdiv
+{
+    z-index: 10;
+    position: absolute;
+    height: 50%;
+    width: 20%;
+    top: 25%;
+    left: 70%;
+}
+#specificationdiv
+{
+    z-index: 10;
+    position: absolute;
+    height: 20%;
+    width: 50%;
+    top: 70%;
+    left: 25%;
+}
+#elementdiv
+{
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    height: 65%;
+    width: 32%;
+}
+#selectordiv
+{
+    position: absolute;
+    top: 35%;
+    left: 24%;
+}
+#innerdiv
+{
+    z-index: 9;
+    position: absolute;
+    height: 40%;
+    width: 20%;
+    top: 30%;
+    left: 15%;
+}
+@-webkit-keyframes pulse {
+ 0% {
+ -webkit-transform: scale(0.9, 0.9);
+ opacity: 0.75;
+}
+ 25% {
+ -webkit-transform: scale(0.95, 0.95);
+ opacity: 0.85;
+}
+ 50% {
+ -webkit-transform: scale(1, 1);
+ opacity: 1;
+}
+ 75% {
+ -webkit-transform: scale(0.95, 0.95);
+ opacity: 0.85;
+}
+ 100% {
+ -webkit-transform: scale(0.9, 0.9);
+ opacity: 0.75;
+};
+}
+
+@keyframes pulse {
+ 0% {
+ transform: scale(0.9, 0.9);
+ opacity: 0.75;
+}
+ 25% {
+ transform: scale(0.95, 0.95);
+ opacity: 0.85;
+}
+ 50% {
+ transform: scale(1, 1);
+ opacity: 1;
+}
+ 75% {
+ transform: scale(0.95, 0.95);
+ opacity: 0.85;
+}
+ 100% {
+transform: scale(0.9, 0.9);
+ opacity: 0.75;
+};
+}
+
+#attentionGraber {
+	-webkit-animation: pulse 1s linear infinite;
+	animation: pulse 1s linear infinite;
+}
+
+#attentionGraber:hover {
+	-webkit-animation: none;
+	animation:none;
+}
